@@ -1,0 +1,453 @@
+:root {
+    --main-color: red;
+}
+
+body {
+    font-family: 'Macondo', cursive;
+    color: white;
+    background-color: #0f0f0f;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5px;
+}
+
+/* Satrt NavBar */
+.navbar {
+    background-color: #0f0f0f;
+    height:  80px;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+.navbar .links {
+    margin-bottom: 20px;
+}
+.navbar .links a{
+    text-decoration: none;
+    color: red;
+    margin-right: 15px;
+    font-size: 17px;
+}
+/* End NavBar */
+
+/* Start Landing */
+.landing {  
+    height: 700px;
+    background-image: url(../Imgs/Landing.jpg);
+    animation: images 3s linear infinite;
+    background-size: cover;
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.landing .me {
+    font-size: 40px ;
+}
+.landing .Quote {
+    text-align: center;
+}
+/* End Landing */
+
+/* Start characters */
+.button {
+    font-size: 40px;
+    border: 2px solid var(--main-color);
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 70px;
+    position: relative;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 40%);
+    padding: 10px 10px;
+    z-index: 2;
+    
+}
+.button::before {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 87px;
+    background-color: #0f0f0f;
+    top: -3px;
+    z-index: -5;
+}
+.button::after {
+    content: '';
+    position: absolute;
+    width: 104%;
+    height: 85%;
+    background-color: #0f0f0f;
+    top: 5px;
+    left: -4px;
+    z-index: -1;
+}
+
+
+/* End characters */
+
+/* Start Nav */
+.navbar .navbar-nav .nav-link {
+    color: var(--lihgt-color);
+}
+.navbar .logo {
+    max-width: 250px;
+}
+.nav-link a {
+    position: relative;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+}
+.nav-item a::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: 0px;
+}
+/* End Nav */
+
+/* Start Characters */
+.characters {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.characters .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+.characters .container .feat{
+    width: calc(80% / 4);
+    margin-bottom: 5px;
+    border: 5px outset #0f0f0f;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+.characters img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    border-radius: 20px;
+    max-height: 200px;
+    transition: 0.5s;
+}
+.characters img:hover {
+    border: 2px solid red;
+    width: 300px;
+}
+.feat h4 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.feat p {
+    font-family:'Times New Roman', Times, serif !important;
+    font-size: 20px;
+    transition: 1s;
+    animation: talk 3s infinite alternate-reverse;
+
+}
+.feat p:hover {
+    color: var(--main-color);
+}
+
+/* End Characters */
+
+/* Start About */
+.about {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-image: url(../Imgs/back.jpg);
+    background-size: cover;
+    height: 900px;
+    padding-top: 100px;
+}
+
+@media (max-width:768px) {
+    .about  {
+    padding: 10px;
+    }
+}
+.about p {
+    font-size: 25px;
+    font-weight: bolder;
+    color: black;
+    width: 700px;
+    transition: 0.5s;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 40px;
+}
+
+@media (max-width:1300px) {
+    .overlay {
+        display: none;
+    }
+}
+@media (max-width:768px) {
+    .about p {
+    width: 270px;
+    font-size: 20px;
+    }
+}
+@media (min-width:370px) {
+    .about .text {
+        margin-left: 69px;
+    }
+}
+.about p:hover {
+    color: var(--main-color) !important; 
+}
+.quote {
+    /* font-family: 'Times New Roman', Times, serif !important; */
+    font-size: 30px;
+    letter-spacing: 7px;
+    color: goldenrod;
+}
+/* End About */
+
+
+/* Start Cast */
+.topCast {
+margin-bottom: 50px;
+}
+.topCast .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.topCast .container .cast-box {
+    display: flex;
+    border: 3px outset #0f0f0f;
+    box-shadow: 0px 0px 10px 5px rgba(46, 46, 46, 0.233);
+    width: 300px;
+    padding: 15px;
+    transition: .4s;
+    animation: shadow 4s ease-in-out infinite;
+}
+.topCast .container .cast-box:hover {
+    box-shadow: 0px 0px 10px 5px rgba(255, 0, 0, 0.847);
+} 
+.topCast .container .cast-box img {
+    height: 120px;
+    width: 120px;
+    border: 2px solid black;
+    outline: 3px solid white;
+    border-radius: 50%;
+    margin-right: 25px;
+}
+.topCast .container .cast-box h2 {
+    font-size: 20px;
+    line-height: 2;
+}
+/* End Cast */
+
+
+/* Start Gallery */
+.gallery {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-image: url(../Imgs/galleryback..jpg);
+    background-size: cover;
+}
+.gallery .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+}
+
+.gallery .container img {
+    height: 300px;
+    width: 300px;
+    border: 10px outset black;
+    border-radius: 40px;
+}
+.gallery .container img:hover {
+    width: 500px;
+    height: 300px;
+}
+.gallery .container .image {
+    background-color: wheat;
+    border-radius: 50px;
+    position: relative;
+    transition: .3s;
+}
+.gallery .container .image:hover {
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 2px rgba(186, 177, 177, 0.849);
+}
+/* End Gallery */
+
+/* Start Video */
+.videos {
+margin-bottom: 200px;
+}
+.videos .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.videos .container  video {
+    width: 500px;
+    border: 10px outset white;
+    border-radius: 10px;
+}
+
+/* End Video */
+
+/* Start Footer */
+footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #d31a21;
+    margin-top: 100px;
+    padding: 20px 50px;
+    height: 165px;
+}
+footer .social-icon {
+    flex-wrap: wrap;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 20px;
+}
+footer .social-icon,
+footer .menu {
+    margin: 10px 0;
+}
+footer .social-icon li a {
+    font-size: 2em;
+    color: var(--lihgt-color);
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.7s;
+}
+footer .social-icon li a:hover {
+    transform: translateY(-10px);
+    color: var(--dark-color) !important;
+}
+footer p {
+    font-weight: bolder;
+    font-size: 40px;
+}
+footer p span {
+    font-size: 40px;
+    color: #0f0f0f;
+}
+
+@media (max-width:430) {
+    footer .menu li a {
+        margin-left: -3px;
+    }
+}
+footer .menu li a:hover {
+    opacity: 1;
+}
+footer p {
+    text-align: center; 
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background:  url(../Imgs/wave.png);
+    background-size: 2300px 100px;
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animatewave 4s linear infinite;
+}
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animatewave_02 4s linear infinite;
+}
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animatewave 3s linear infinite;
+}
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animatewave 3s linear infinite;
+}
+/* End Footer */
+
+@keyframes animatewave {
+    0% {
+        background-position-x: 2300px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+@keyframes animatewave_02 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 2300px;
+    }
+}
+
+@keyframes talk {
+    0% {
+        color: white;
+    }
+    50% {
+        color: var(--main-color);
+    }
+    100% {
+        color: white;
+    }
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0px 0px 10px 5px rgba(46, 46, 46, 0.233);
+    }
+    50% {
+        box-shadow: 0px 0px 10px 5px rgb(255, 0, 0);
+    }
+}
